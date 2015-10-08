@@ -10,6 +10,6 @@ RUN echo 'set debconf/frontend noninteractive' | debconf-communicate debconf
 # cleanup is included to reduce image bloat.
 RUN apt-get update \
     && apt-get --assume-yes dist-upgrade \
-    && apt-get --assume-yes install software-properties-common \
+    && apt-get --assume-yes install apt-transport-https software-properties-common \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
