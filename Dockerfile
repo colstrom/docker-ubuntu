@@ -6,4 +6,4 @@ MAINTAINER chris@olstrom.com
 # fail and log the required configuration, so it can be added to the Dockerfile.
 ENV DEBIAN_FRONTEND noninteractive
 
-COPY bin/package /usr/local/bin/package
+COPY vendor/github.com/colstrom/package.sh/bin/* /usr/local/bin/
